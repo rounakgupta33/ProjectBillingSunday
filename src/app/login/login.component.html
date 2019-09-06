@@ -1,0 +1,41 @@
+
+
+<div class="container">
+  <h1>Login Form</h1>
+
+  <form [formGroup]="LoginForm" (ngSubmit) ="onLogin()">
+    <div class="form-group">
+    
+  
+    
+      <label for="id">ID</label>
+      <input type="number" class="form-control"  #ref formControlName="id" id="id">
+      </div>
+      
+      <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" #ref formControlName="password" id="password">
+      <button type="submit" class="btn btn-success">Login</button>
+      </div>
+      
+    
+    </form>​
+
+    
+    <div *ngIf="role =='Admin'" >
+        <a routerLink="/admin">Hello Admin</a>
+        <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="role =='DEO'" >
+        <a routerLink="/dataentry">Hello DEO</a>
+        <router-outlet></router-outlet>
+    </div>
+
+    
+
+    
+
+    
+    <ng-template #B>
+      
+    </ng-template>

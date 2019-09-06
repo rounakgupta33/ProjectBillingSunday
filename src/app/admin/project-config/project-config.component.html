@@ -1,0 +1,41 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<div class="jumbotron">
+<form [formGroup]="ProjectConfigForm" (ngSubmit) ="onProjectConfig()">
+  <div>
+  
+  <div>
+  
+  <label for="configid">Config Id</label>
+  <input type="number" #ref formControlName="id" id="id">
+  </div>
+  
+  <div>
+  <label for="projectid">Project Id</label>
+  <input type="number" #ref formControlName="projectid" id="projectid">
+  </div>
+
+
+  <label for="role">Role</label>
+  <input type="text" #ref formControlName="role" id="role">
+  </div>
+  
+  <label for="location">Location</label>
+  <input type="radio" #ref formControlName="location" id="location">
+
+  <label for="perhourbilling">PerHourBilling</label>
+  <input type="number"  #ref formControlName="perhourbilling" id="perhourbilling">
+
+  <button type = "submit" >submit</button>
+
+  </form>​
+</div>
